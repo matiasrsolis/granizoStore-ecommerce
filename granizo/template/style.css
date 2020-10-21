@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    position: fixed;
+    transform: translateX(-30em);
+    width: 30em;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+}
+.sidebar.open{
+    transform: translateX(0em);
+}

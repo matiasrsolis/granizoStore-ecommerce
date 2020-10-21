@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granizo Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button onclick="openMenu()">Menu</button>
+        <div class="brand">
+            <a href="index.html">Granizo Store</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <ul>
+            <li class="productCard">
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="productInfo">
+                        <h2 class="nombreProducto">Producto 1</h2>
+                        <p class="marca">De marca</p>
+                        <p class="precio">$99</p>
+                    </div>
+                </div>
+            </li>
+            <li class="productCard">
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="productInfo">
+                        <h2 class="nombreProducto">Producto 1</h2>
+                        <p class="marca">De marca</p>
+                        <p class="precio">$99</p>
+                    </div>
+                </div>
+            </li>
+            <li class="productCard">
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="productInfo">
+                        <h2 class="nombreProducto">Producto 1</h2>
+                        <p class="marca">De marca</p>
+                        <p class="precio">$99</p>
+                    </div>
+                </div>
+            </li>
+            <li class="productCard">
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="productInfo">
+                        <h2 class="nombreProducto">Producto 1</h2>
+                        <p class="marca">De marca</p>
+                        <p class="precio">$99</p>
+                    </div>
+                </div>
+            </li>
+            <li class="productCard">
+                <div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div class="productInfo">
+                        <h2 class="nombreProducto">Producto 1</h2>
+                        <p class="marca">De marca</p>
+                        <p class="precio">$99</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <aside class="sidebar">
+            <button onclick="closeMenu()">X</button>
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Cuero</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function openMenu() {
+            document.querySelector(".sidebar").classList.add("open");
+        }
+        function closeMenu() {
+            document.querySelector(".sidebar").classList.remove("open")
+        }
+    </script>
+</body>
+</html>
