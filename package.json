@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/matiasrsolis/granizoStore-ecommerce#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-redux": "^7.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.6"
   }
 }
