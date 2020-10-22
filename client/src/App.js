@@ -1,6 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import data from './data';
+import ProductScreen from './screens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
 
 function App() {
 
@@ -13,11 +17,12 @@ function App() {
   }
 
   return (
+    <BrowserRouter>  
     <div>
         <header>
           <button onClick={openMenu}>Menu</button>
           <div className="brand">
-              <a href="index.html">Granizo Store</a>
+              <Link to='/'><h1>Granizo Store</h1></Link>
           </div>
           <nav>
               <ul>
@@ -28,68 +33,9 @@ function App() {
           
       </header>
       <main>
-        <ul>
-            <li className="productCard">
-                <div>
-                    <figure>
-                        <img src="/images/cartera.jpg" alt="" />
-                    </figure>
-                    <div className="productInfo">
-                        <h2 className="nombreProducto">Producto 1</h2>
-                        <p className="marca">De marca</p>
-                        <p className="precio">$99</p>
-                    </div>
-                </div>
-            </li>
-            <li className="productCard">
-                <div>
-                    <figure>
-                      <img src="/images/cartera.jpg" alt="" />
-                    </figure>
-                    <div className="productInfo">
-                        <h2 className="nombreProducto">Producto 1</h2>
-                        <p className="marca">De marca</p>
-                        <p className="precio">$99</p>
-                    </div>
-                </div>
-            </li>
-            <li className="productCard">
-                <div>
-                    <figure>
-                       <img src="/images/cartera.jpg" alt="" />
-                    </figure>
-                    <div className="productInfo">
-                        <h2 className="nombreProducto">Producto 1</h2>
-                        <p className="marca">De marca</p>
-                        <p className="precio">$99</p>
-                    </div>
-                </div>
-            </li>
-            <li className="productCard">
-                <div>
-                    <figure>
-                        <img src="/images/cartera.jpg" alt="" />    
-                    </figure>
-                    <div className="productInfo">
-                        <h2 className="nombreProducto">Producto 1</h2>
-                        <p className="marca">De marca</p>
-                        <p className="precio">$99</p>
-                    </div>
-                </div>
-            </li>
-            <li className="productCard">
-                <div>
-                    <figure>
-                        <img src="/images/cartera.jpg" alt="" />
-                    </figure>
-                    <div className="productInfo">
-                        <h2 className="nombreProducto">Producto 1</h2>
-                        <p className="marca">De marca</p>
-                        <p className="precio">$99</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <Route path="/product/:id" component={ProductScreen} />   
+        <Route path="/" exact component={HomeScreen} />  
+        
         <aside className="sidebar">
             <button onClick={closeMenu}>X</button>
             <h3>Categorías</h3>
@@ -103,6 +49,7 @@ function App() {
 
     </footer>
     </div>
+    </BrowserRouter>
   );
 }
 
