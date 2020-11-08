@@ -21,7 +21,8 @@ function App() {
         <header>
           <button onClick={openMenu}>Menu</button>
           <div className="brand">
-              <Link to='/'><h1>Granizo Store</h1></Link>
+              <Link to='/'><h1>Mi Niña Veneno</h1></Link>
+              <h3>El amor necesario</h3>
           </div>
           <nav>
               <ul>
