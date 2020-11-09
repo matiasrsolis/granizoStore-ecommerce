@@ -7,7 +7,8 @@ export default {
         image: '/images/cartera.jpg',
         rating: 4.5,
         numReviews: 10,
-        description: 'De buen cuero de color marrón y de calidad.'
+        description: 'De buen cuero de color marrón y de calidad.',
+        countInStock: 0
     },
     {
         _id: 2345,
@@ -16,8 +17,9 @@ export default {
         brand: 'OyM',
         image: '/images/cartera.jpg',
         rating: 4.5,
-        numReviews: 10,
-        description: 'De buen cuero de color marrón y de calidad.'
+        numReviews: 5,
+        description: 'De buen cuero de color marrón y de calidad.',
+        countInStock: 4
     },
     {
         _id: 3456,
@@ -26,8 +28,9 @@ export default {
         brand: 'OyM',
         image: '/images/cartera.jpg',
         rating: 4.5,
-        numReviews: 10,
-        description: 'De buen cuero de color marrón y de calidad.'
+        numReviews: 7,
+        description: 'De buen cuero de color marrón y de calidad.',
+        countInStock: 3
     },
     {
         _id: 4567,
@@ -37,7 +40,8 @@ export default {
         image: '/images/cartera.jpg',
         rating: 4.5,
         numReviews: 10,
-        description: 'De buen cuero de color marrón y de calidad.'
+        description: 'De buen cuero de color marrón y de calidad.',
+        countInStock: 10
     },
     {
         _id: 5678,
@@ -47,7 +51,8 @@ export default {
         image: '/images/cartera.jpg',
         rating: 4.5,
         numReviews: 10,
-        description: 'De buen cuero de color marrón y de calidad.'
+        description: 'De buen cuero de color marrón y de calidad.',
+        countInStock: 15
     }
 ]
 }
