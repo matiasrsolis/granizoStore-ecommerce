@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-online-store",
   "version": "1.0.0",
-  "description": "\"# granizoStore-ecommerce\"",
+  "description": "\"# mi-ninia-veneno-ecommerce\"",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch backend --exec babel-node api/server.js"
@@ -10,12 +10,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matiasrsolis/granizoStore-ecommerce.git"
+    "url": "https://github.com/matiasrsolis/miNiniaVeneno-storeEcommerce"
   },
   "bugs": {
-    "url": "https://github.com/matiasrsolis/granizoStore-ecommerce/issues"
+    "url": "https://github.com/matiasrsolis/miNiniaVeneno-storeEcommerce/issues"
   },
-  "homepage": "https://github.com/matiasrsolis/granizoStore-ecommerce#readme",
+  "homepage": "https://github.com/matiasrsolis/miNiniaVeneno-storeEcommerce#readme",
   "dependencies": {
     "express": "^4.17.1",
     "react-redux": "^7.2.1"
