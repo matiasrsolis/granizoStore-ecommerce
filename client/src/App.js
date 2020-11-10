@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
+import CartScreen from './screens/CartScreen';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
@@ -33,7 +34,8 @@ function App() {
           
       </header>
       <main>
-        <Route path="/product/:id" component={ProductScreen} />   
+        <Route path="/product/:id" component={ProductScreen} />  
+        <Route path="/cart/:id?" component={CartScreen} /> 
         <Route path="/" exact component={HomeScreen} />  
         
         <aside className="sidebar">
