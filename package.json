@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/matiasrsolis/miNiniaVeneno-storeEcommerce#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.10.13",
     "react-redux": "^7.2.1"
   },
   "devDependencies": {
