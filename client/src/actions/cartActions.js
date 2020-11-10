@@ -1,7 +1,8 @@
+import Cookie from 'js-cookie';
 const { default: Axios } = require("axios");
-const { CART_ADD_ITEM } = require("../constants/cartConstants");
+const { CART_ADD_ITEM, CART_REMOVE_ITEM } = require("../constants/cartConstants");
 
-const addToCart = (productId, qty) => async (dispatch) => {
+const addToCart = (productId, qty) => async (dispatch, getState) => {
     try {        
         const { data } = await Axios.get("/api/products/"+ productId);
         dispatch({ 
@@ -15,10 +16,22 @@ const addToCart = (productId, qty) => async (dispatch) => {
                 qty
             }
         });
+
+        // Cookies --> Permite que al actualizar el carrito no se borren los productos cargados anteriormente
+        const { cart: {cartItems} } = getState();
+        Cookie.set("cartItems", JSON.stringify(cartItems));
     }
     catch (error) {
 
     }
 }
 
-export { addToCart }
+const removeFromCart = (productId) => (dispatch, getState) => {
+    dispatch({ type: CART_REMOVE_ITEM, payload: productId });
+
+    //cookies
+    const { cart: {cartItems} } = getState();
+    Cookie.set("cartItems", JSON.stringify(cartItems));
+}
+
+export { addToCart, removeFromCart }
