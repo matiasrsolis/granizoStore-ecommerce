@@ -7,7 +7,7 @@ function SigninScreen(props){
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const userSingnin = useSelector(state => state.userSingnin);
+    const userSingnin = useSelector(state => state.userSignin);
     const { loading, userInfo, error } = userSingnin;
     const dispatch = useDispatch();
 
