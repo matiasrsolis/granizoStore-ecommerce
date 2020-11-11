@@ -3,6 +3,7 @@ import './App.css';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
+import SigninScreen from './screens/SigninScreen';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 
@@ -28,12 +29,13 @@ function App() {
           <nav>
               <ul>
                   <li><a href="cart.html">Cart</a></li>
-                  <li><a href="signIn.html">Sign In</a></li>
+                  <Link to="/signin">Ingresar</Link>
               </ul>
           </nav>
           
       </header>
       <main>
+        <Route path="/signin" component={SigninScreen} /> 
         <Route path="/product/:id" component={ProductScreen} />  
         <Route path="/cart/:id?" component={CartScreen} /> 
         <Route path="/" exact component={HomeScreen} />  
