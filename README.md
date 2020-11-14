@@ -2,7 +2,7 @@
 <p>Aplicación e-commerce realizado con React, Redux, Node, Express, MongoDB y Mongoose</p>
 <span>Aún en proceso</span>
 <br>
-✔ HTML y CSS incluyendo grid, FlexBox y diseño responsive. <br>
+✔ HTML y CSS con grid, FlexBox y diseño responsive. <br>
 ✔ Acciones escalables y páginas dinámicas con JavaScript.<br>
 ✔ Librería ReactJS para construir el front-end de la e-commerce.<br>
 ✔ Cuenta con formularios de logueo y registro de usuario, catálogo de productos, categorización, buscador y carrito de compras.<br>
