@@ -1,6 +1,6 @@
 <h1>MiNinieVeneno Store - Ecommerce App</h1>
 <p>Aplicación e-commerce realizado con React, Redux, Node, Express, MongoDB y Mongoose</p>
-<span>Aún en proceso</span>
+<p>Aún en proceso</p>
 <br>
 ✔ HTML y CSS con grid, FlexBox y diseño responsive. <br>
 ✔ Acciones escalables y páginas dinámicas con JavaScript.<br>
