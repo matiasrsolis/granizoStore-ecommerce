@@ -23,7 +23,7 @@ function App() {
         <header>
           <button onClick={openMenu}>Menu</button>
           <div className="brand">
-              <Link to='/'><h1>Mi Niña Veneno</h1></Link>
+              <Link to='/'><h1>Mi Ninie Veneno</h1></Link>
               <h3>El amor necesario</h3>
           </div>
           <nav>
@@ -35,7 +35,7 @@ function App() {
           
       </header>
       <main>
-        <Route path="/signin" component={SigninScreen} /> 
+        <Route path="/signin" component={SigninScreen} />
         <Route path="/product/:id" component={ProductScreen} />  
         <Route path="/cart/:id?" component={CartScreen} /> 
         <Route path="/" exact component={HomeScreen} />  

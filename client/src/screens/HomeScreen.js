@@ -22,16 +22,14 @@ function HomeScreen(props){
   console.log(props)
   return loading ? <div>Loading...</div> : 
     error ? <div>{error}</div> :
-    <ul className="products">
+    <ul className="productsList">
       {products.map((product) => (
         <li key={product._id}>
           <div className="product">
             <Link to={'/product/' + product._id}>
-              <img
-                className="product-image"
-                src={product.image}
-                alt="product"
-              />
+              <figure>
+                <img className="product-image" src={product.image} alt={product.name}/>
+              </figure>
             </Link>
             <div className="product-name">
               <Link to={'/product/' + product._id}>{product.name}</Link>

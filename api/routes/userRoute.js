@@ -3,7 +3,7 @@ import User from '../models/userModel';
 
 const router = express.Router();
 
-router.post('/sigin', async (req, res) => {
+router.post('/signin', async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password
@@ -25,14 +25,14 @@ router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
       name: 'Matias',
-      email: 'matiassolis31@hotmail.com',
-      password: '1236',
-      isAdmin: true,
+      email: 'matiassolis@hotmail.com.ar',
+      password: '1234',
+      isAdmin: true
     });
     const newUser = await user.save();
     res.send(newUser);
   } catch (error) {
-    res.send({ message: error.message });
+    res.send({ msg: error.message });
   }
 });
 

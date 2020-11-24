@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { signin } from '../actions/userActions';
 
 function SigninScreen(props){
@@ -42,7 +42,7 @@ function SigninScreen(props){
                    <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)}></input> 
                 </li>
                 <li>
-                    <button type="button">Ingresar</button>
+                    <button type="submit">Ingresar</button>
                 </li>
                 <li>
                     ¿Primera vez por aquí?
