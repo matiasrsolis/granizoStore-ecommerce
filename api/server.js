@@ -15,7 +15,7 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true
   })
-  .catch((error) => console.log(error.reason));
+  .catch(error => console.log(error.reason));
 
 const app = express();
 app.use(bodyParser.json());

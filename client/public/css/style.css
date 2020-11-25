@@ -7,10 +7,41 @@
     text-decoration: none;
 }
 
+header{
+    background-color: rgb(29, 51, 93);    
+}
+
+header .headerBox{
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+header .headerBox .brand{
+    text-align: center;
+}
+
+header a{
+    color: #ffffff;
+}
+
+.lineaMulticolor{
+    background: linear-gradient(90deg,#000052 0,#0b9ff4 20%,#00b43d 40%,#f2d500 60%,#e8373c 80%,#e0005d 100%);
+    height: 16px;
+    width: 100%;
+}
+
 .productsList{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-top: 3em;
+}
+
+.productsList li{
+    margin-bottom: 2em;
 }
 
 .productsList figure{

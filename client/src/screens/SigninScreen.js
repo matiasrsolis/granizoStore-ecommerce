@@ -21,41 +21,44 @@ function SigninScreen(props){
     }, [userInfo]); 
 
     const submitHandler = (e) => {
-        e.prevent.default();
-        dispatch(signin(email, password));
+      e.preventDefault();
+      dispatch(signin(email, password));
     }
    
-    return <div>
-        <form onSubmit={submitHandler}>
-            <ul>
-                <h1>Iniciar sesión</h1>
-                <li>
-                    {loading && <div>Loading...</div>}
-                    {error && <div>{error}</div>}
-                </li>
-                <li>
-                   <label htmlFor="email">Email</label>
-                   <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}></input> 
-                </li>
-                <li>
-                   <label htmlFor="password">Contraseña</label>
-                   <input type="password" name="password" id="password" onChange={(e) => setPassword(e.target.value)}></input> 
-                </li>
-                <li>
-                    <button type="submit">Ingresar</button>
-                </li>
-                <li>
-                    ¿Primera vez por aquí?
-                </li>
-                <li>
-                    <Link to="/register">¡Create una cuenta!</Link>
-                </li>
-            </ul>
-        </form>
-    </div>
-    
-
-    
+    return <div className="form">
+    <form onSubmit={submitHandler} >
+      <ul className="form-container">
+        <li>
+          <h2>Hola!</h2>
+        </li>
+        <li>
+          {loading && <div>Loading...</div>}
+          {error && <div>{error}</div>}
+        </li>
+        <li>
+          <label htmlFor="email">
+            Correo electrónico
+          </label>
+          <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
+          </input>
+        </li>
+        <li>
+          <label htmlFor="password">Contraseña</label>
+          <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
+          </input>
+        </li>
+        <li>
+          <button type="submit" className="button primary">Ingresar</button>
+        </li>
+        <li>
+          Primera vez aquí?
+        </li>
+        <li>
+          <Link to="/register" className="button secondary text-center" >Create una cuenta</Link>
+        </li>
+      </ul>
+    </form>
+  </div>
 }
 
 export default SigninScreen;

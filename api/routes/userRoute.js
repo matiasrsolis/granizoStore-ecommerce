@@ -1,5 +1,6 @@
 import express from 'express';
 import User from '../models/userModel';
+import { getToken } from '../util';
 
 const router = express.Router();
 
@@ -14,7 +15,7 @@ router.post('/signin', async (req, res) => {
       name: signinUser.name,
       email: signinUser.email,
       isAdmin: signinUser.isAdmin,
-      token: getToken(user)
+      token: getToken(signinUser)
     })
   } else {
     res.status(401).send({ msg: "Email y/o contraseña no correcta/s" })
@@ -25,7 +26,7 @@ router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
       name: 'Matias',
-      email: 'matiassolis@hotmail.com.ar',
+      email: 'matiassolis96@hotmail.com',
       password: '1234',
       isAdmin: true
     });

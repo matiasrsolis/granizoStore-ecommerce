@@ -21,18 +21,20 @@ function App() {
     <BrowserRouter>  
     <div>
         <header>
-          <button onClick={openMenu}>Menu</button>
-          <div className="brand">
-              <Link to='/'><h1>Mi Ninie Veneno</h1></Link>
-              <h3>El amor necesario</h3>
-          </div>
-          <nav>
-              <ul>
-                  <li><a href="cart.html">Cart</a></li>
-                  <Link to="/signin">Ingresar</Link>
-              </ul>
-          </nav>
-          
+          <div className="headerBox">
+            <button onClick={openMenu}>Menu</button>
+            <div className="brand">
+                <Link to='/'><h1>Mi Ninie Veneno</h1></Link>
+                <h3>El amor necesario</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="cart.html">Cart</a></li>
+                    <Link to="/signin">Ingresar</Link>
+                </ul>
+            </nav>
+          </div>          
+          <div className="lineaMulticolor"></div>
       </header>
       <main>
         <Route path="/signin" component={SigninScreen} />
