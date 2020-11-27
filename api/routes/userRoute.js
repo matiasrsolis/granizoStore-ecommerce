@@ -20,13 +20,33 @@ router.post('/signin', async (req, res) => {
   } else {
     res.status(401).send({ msg: "Email y/o contraseña no correcta/s" })
   }
-})
+});
+
+router.post('/register', async (req, res) => {
+  const user = new User({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password
+  });
+  const newUser = await user.save();
+  if (newUser) {
+    res.send({
+      _id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      isAdmin: newUser.isAdmin,
+      token: getToken(newUser),
+    });
+  } else {
+    res.status(401).send({ message: 'Datos icorrectos.' });
+  }
+});
 
 router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
       name: 'Matias',
-      email: 'matiassolis96@hotmail.com',
+      email: 'matiassolis88@hotmail.com',
       password: '1234',
       isAdmin: true
     });
