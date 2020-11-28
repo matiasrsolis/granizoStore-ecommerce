@@ -34,11 +34,11 @@ function App() {
             </div>
             <nav>
                 <ul>
-                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="/cart">Carrito</a></li>
                     {userInfo ? (
                       <Link to="/profile">{userInfo.name}</Link>
                     ) : (
-                      <Link to="/signin">Sign In</Link>
+                      <Link to="/signin">Ingresar</Link>
                     )}
                 </ul>
             </nav>
