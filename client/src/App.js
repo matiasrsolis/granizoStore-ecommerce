@@ -7,6 +7,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import ProductsScreen from './screens/ProductsScreen';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <div className="lineaMulticolor"></div>
       </header>
       <main>
+        <Route path="/products" component={ProductsScreen} />
         <Route path="/signin" component={SigninScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/product/:id" component={ProductScreen} />  

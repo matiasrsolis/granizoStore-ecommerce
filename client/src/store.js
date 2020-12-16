@@ -5,6 +5,9 @@ import { productDetailsReducer, productListReducer } from './reducers/productRed
 import { cartReducer } from './reducers/cartReducers';
 import { userSigninReducer } from './reducers/userReducers';
 import { userRegisterReducer } from './reducers/userReducers';
+import { productSaveReducer } from './reducers/productReducer';
+import { productDeleteReducer } from './reducers/productReducer';
+import { productReviewSaveReducer } from './reducers/productReducer';
 
 //cookies
 const cartItems = Cookie.getJSON("cartItems") || [];
@@ -16,7 +19,10 @@ const reducer = combineReducers({
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin: userSigninReducer,
-  userRegister: userRegisterReducer
+  userRegister: userRegisterReducer,
+  productSave: productSaveReducer,
+  productDelete: productDeleteReducer,
+  productReviewSave: productReviewSaveReducer,
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
