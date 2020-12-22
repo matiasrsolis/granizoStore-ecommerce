@@ -206,7 +206,6 @@ function ProductsScreen(props) {
           </form>
         </div>
       )}
-
       <div className="product-list">
         <table className="table">
           <thead>
@@ -219,8 +218,8 @@ function ProductsScreen(props) {
               <th>Action</th>
             </tr>
           </thead>
-          {/* <tbody>
-            {products.map((product) => (
+          <tbody>
+            {products&&products.map((product) => (
               <tr key={product._id}>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
@@ -229,18 +228,18 @@ function ProductsScreen(props) {
                 <td>{product.brand}</td>
                 <td>
                   <button className="button" onClick={() => openModal(product)}>
-                    Edit
+                    Editar
                   </button>{' '}
                   <button
                     className="button"
                     onClick={() => deleteHandler(product)}
                   >
-                    Delete
+                    Borrar
                   </button>
                 </td>
               </tr>
             ))}
-          </tbody> */}
+          </tbody>
         </table>
       </div>
     </div>
