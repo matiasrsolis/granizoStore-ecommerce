@@ -5,6 +5,7 @@
     list-style: none;
     border: none;
     text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header{
@@ -55,6 +56,150 @@ header a{
     height: 100%;
 }
 
+.product-header{
+    padding: 2em;
+    text-align: center;
+}
+
+.product-header button{
+    margin: auto;
+    display: block;
+    padding: .5em 2em;
+    background-color: #690ffa;
+    color: #ffffff;
+    margin-top: 2em;
+    font-size: 1.2em;
+    border-radius: 2em;
+    cursor: pointer;
+    outline: none;
+}
+
+.crud-product-list{
+    background-color: #ffffff;
+}
+
+.crud-product-list .table{
+    margin: auto;
+}
+
+.crud-product-list .table thead tr th{
+    padding: .7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.crud-product-list .table tbody tr td{
+    padding: .7em;
+    border: none;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.crud-product-list .table tbody tr:nth-child(odd){
+    background-color: rgba(0,0,0,.1);
+}
+
+.crud-product-list .table tbody tr td button{
+    padding: .7em 1.3em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.crud-product-list .table tbody tr td button:first-child{
+    background-color: #690ffa;
+    color: #ffffff;
+}
+
+.crud-product-list .table tbody tr td button:first-child:hover{
+    background-color: #4905b8;
+}
+
+.crud-product-list .table tbody tr td button:last-child{
+    background-color: #ff0080;
+    color: #ffffff;
+}
+
+.crud-product-list .table tbody tr td button:last-child:hover{
+    background-color: #b4005a;
+}
+
+.crear-product,
+.crud-product-list{
+    margin-top: 2em;
+}
+
+.crear-product{
+    margin-bottom: 2em;
+}
+
+.crear-product ul{
+    max-width: 850px;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.crear-product ul h2{
+    font-size: 1.5em;
+}
+
+.crear-product ul li{
+    padding: .5em 0;
+    display: flex;
+    align-items: center;
+}
+
+.crear-product ul li label,
+.crear-product ul li input{
+    display: inline-block;
+}
+
+.crear-product ul li label{
+    width: 15%;
+}
+
+.crear-product ul li input{
+    width: 85%;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.crear-product ul li input{
+    border-bottom: solid 1.5px  #ff0080;
+    padding: .5em;
+    margin-left: auto;
+    color: #a10051;
+}
+
+.crear-product ul li input:focus{
+    border-bottom: solid 2px  #ff0080;
+    color: #1a008f ;
+}
+
+.crear-product ul li>div input{
+    width: 50%;
+}
+
+.crear-product ul li button{
+    padding: .7em 1.3em;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.crear-product ul li textarea{
+    border: solid 1.5px  #ff0080;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #a10051;
+    font-size: 1.2em;
+    width: 75%;
+    outline: none;
+    padding: .7em;
+    border-radius: 10px;
+}
+
+.crear-product ul li textarea:focus{
+    border: solid 2px  #ff0080;
+    color: #1a008f;
+}
 
 @media(min-width: 768px){
     .productsList{
