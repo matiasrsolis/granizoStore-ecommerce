@@ -11,9 +11,13 @@ function SigninScreen(props){
     const { loading, userInfo, error } = userSingnin;
     const dispatch = useDispatch();
 
+    // ( /signin?redirect=shipping ) --> Redireccionar a shipping (compra) 
+    // ( /signin ) --> volver a Home 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
     useEffect(() => {
         if(userInfo){
-            props.history.push("/");
+          props.history.push(redirect);
         }
         return() => {
             //
@@ -54,7 +58,7 @@ function SigninScreen(props){
           Primera vez aquí?
         </li>
         <li>
-          <Link to="/register">Create una cuenta</Link>
+          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect}>Create una cuenta</Link>
         </li>
       </ul>
     </form>

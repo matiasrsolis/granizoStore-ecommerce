@@ -14,6 +14,8 @@ function RegisterScreen(props){
     const { loading, userInfo, error } = userRegister;
     const dispatch = useDispatch();
 
+    // ( /register?redirect=shipping ) --> Redireccionar a shipping (compra) 
+    // ( /register ) --> volver a Home 
     const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
     useEffect(() => {
         if(userInfo){
@@ -67,7 +69,7 @@ function RegisterScreen(props){
           <button type="submit">Registrar</button>
         </li>
         <li>
-          Ya tenés una cuenta? <Link to="/signin">Ingresar</Link>
+          Ya tenés una cuenta? <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect}>Ingresá</Link>
         </li>
       </ul>
     </form>

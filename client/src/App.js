@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
-import { useSelector } from 'react-redux';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 import ProductsScreen from './screens/ProductsScreen';
+import ShippingScreen from './screens/ShippingScreen';
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
       </header>
       <main>
           
-
+        <Route path="/shipping" component={ShippingScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/signin" component={SigninScreen} />
         <Route path="/register" component={RegisterScreen} />

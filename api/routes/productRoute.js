@@ -25,6 +25,7 @@ router.get('/', async (req, res) => {
   res.send(products);
 });
 
+//Checkout Wizard --> Último paso
 router.get('/:id', async (req, res) => {
   const product = await Product.findOne({ _id: req.params.id });
   if (product) {
@@ -33,6 +34,7 @@ router.get('/:id', async (req, res) => {
     res.status(404).send({ message: 'Product Not Found.' });
   }
 });
+
 router.post('/:id/reviews', isAuth, async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (product) {
