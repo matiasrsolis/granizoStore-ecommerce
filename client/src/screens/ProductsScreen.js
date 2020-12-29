@@ -46,6 +46,7 @@ function ProductsScreen(props) {
     };
   }, [successSave, successDelete]);
 
+  //openModal: botón "Agregar producto" y "Editar" --> Abre formulario
   const openModal = (product) => {
     setModalVisible(true);
     setId(product._id);
@@ -105,6 +106,7 @@ function ProductsScreen(props) {
           Agregá un producto
         </button>
       </div>
+
       {modalVisible && (
         <div className="form">
           <form onSubmit={submitHandler} className="crear-product">
@@ -114,7 +116,6 @@ function ProductsScreen(props) {
                 {loadingSave && <div>Loading...</div>}
                 {errorSave && <div>{errorSave}</div>}
               </li>
-
               <li>
                 <label htmlFor="name">Nombre</label>
                 <input
@@ -206,6 +207,7 @@ function ProductsScreen(props) {
           </form>
         </div>
       )}
+      
       <div className="crud-product-list">
         <table className="table">
           <thead>

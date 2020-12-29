@@ -31,22 +31,23 @@ function HomeScreen(props){
         {
           !userInfo ?
           (
-          <h2>Formá parte de MNV!</h2>
+          <h2>Formá parte de nuestra comunidad!</h2>
           )
           :
           (
-            userInfo.name !== "Orne" ?
-            <h2>Hola {userInfo.name}!</h2> :
-            <h2>Hola, si sos {userInfo.name} Manes, te extraño y te amo!</h2>
+            userInfo.name === "Orne" || userInfo.name === "Ornella" || userInfo.name === "orne" || userInfo.name === "ornella" ?
+            <div><h2>Hola {userInfo.name}, te extraño y te amo!</h2><h3>Hice la app pensando en vos.</h3></div> :
+            <h2>Hola {userInfo.name}!</h2>
           )
         }
 
         {
-          userInfo.isAdmin ?
+          !userInfo ?
           (
-            <a href="/products">Agregá un producto</a>
-          ):(
             <p>Conseguí lo mejor para vos!</p>
+          ):(
+            userInfo.isAdmin ? (<a href="/products">Administrá tus productos</a>) : (<p>...</p>)
+            
           )
         }
 
@@ -79,39 +80,3 @@ function HomeScreen(props){
 }
 
 export default HomeScreen;
-
-
-// return (
-//   <>
-    
-//     {loading ? (
-//       <div>Loading...</div>
-//     ) : error ? (
-//       <div>{error}</div>
-//     ) : (
-//       <ul className="products">
-//         {products.map((product) => (
-//           <li key={product._id}>
-//             <div className="product">
-//               <Link to={'/product/' + product._id}>
-//                 <img
-//                   className="product-image"
-//                   src={product.image}
-//                   alt="product"
-//                 />
-//               </Link>
-//               <div className="product-name">
-//                 <Link to={'/product/' + product._id}>{product.name}</Link>
-//               </div>
-//               <div className="product-brand">{product.brand}</div>
-//               <div className="product-price">${product.price}</div>
-//               <div className="product-rating">
-                
-//               </div>
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//     )}
-//   </>
-// );
