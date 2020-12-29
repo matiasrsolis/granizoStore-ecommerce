@@ -47,13 +47,15 @@ function App() {
           <div className="lineaMulticolor"></div>
       </header>
       <main>
+          
+
         <Route path="/products" component={ProductsScreen} />
         <Route path="/signin" component={SigninScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/product/:id" component={ProductScreen} />  
         <Route path="/cart/:id?" component={CartScreen} /> 
         <Route path="/" exact component={HomeScreen} />  
-        
+
         <aside className="sidebar">
             <button onClick={closeMenu}>X</button>
             <h3>Categorías</h3>
@@ -62,6 +64,8 @@ function App() {
                 <li><a href="#">Cuero</a></li>
             </ul>
         </aside>
+
+        
     </main>
     <footer>
 
