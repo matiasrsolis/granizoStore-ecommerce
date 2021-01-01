@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
+import orderRoute from './routes/orderRoute';
 
 dotenv.config();
 
@@ -31,6 +32,8 @@ app.use('/api/products', productRoute);
 //         res.status(404).send({msg: "Producto no encontrado."});
 //     }
 // });
+
+app.use('/api/orders', orderRoute);
 
 app.get("/api/products", (req, res) => {
     res.send(data.products);

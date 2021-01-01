@@ -9,6 +9,8 @@ import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
+import PaymentScreen from './screens/PaymentScreens';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 
 function App() {
@@ -48,7 +50,8 @@ function App() {
           <div className="lineaMulticolor"></div>
       </header>
       <main>
-          
+        <Route path="/placeorder" component={PlaceOrderScreen} />  
+        <Route path="/payment" component={PaymentScreen} />
         <Route path="/shipping" component={ShippingScreen} />
         <Route path="/products" component={ProductsScreen} />
         <Route path="/signin" component={SigninScreen} />
