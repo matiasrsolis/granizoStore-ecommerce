@@ -11,6 +11,7 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreens';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
           <div className="lineaMulticolor"></div>
       </header>
       <main>
+        <Route path="/order/:id" component={OrderScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />  
         <Route path="/payment" component={PaymentScreen} />
         <Route path="/shipping" component={ShippingScreen} />
