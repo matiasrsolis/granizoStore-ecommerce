@@ -48,6 +48,17 @@ function App() {
                       <Link to="/signin">Ingresar</Link>
                     )}
                 </ul>
+                {userInfo && userInfo.isAdmin && (
+                  <div className="dropdown">
+                    <a href="#">Admin</a>
+                    <ul className="dropdown-content">
+                      <li>
+                        <Link to="/orders">Órdenes</Link>
+                        <Link to="/products">Productos</Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
             </nav>
           </div>          
           <div className="lineaMulticolor"></div>
@@ -62,6 +73,7 @@ function App() {
         <Route path="/products" component={ProductsScreen} />
         <Route path="/signin" component={SigninScreen} />
         <Route path="/register" component={RegisterScreen} />
+        <Route path="/category/:id" component={HomeScreen} />
         <Route path="/product/:id" component={ProductScreen} />  
         <Route path="/cart/:id?" component={CartScreen} /> 
         <Route path="/" exact component={HomeScreen} />  
@@ -70,8 +82,13 @@ function App() {
             <button onClick={closeMenu}>X</button>
             <h3>Categorías</h3>
             <ul>
-                <li><a href="#">Ropa</a></li>
-                <li><a href="#">Cuero</a></li>
+                <li>
+                  <Link to="/category/Remera">Remeras</Link>
+                </li>
+                
+                <li>
+                  <Link to="/category/Buzos">Buzos</Link>
+                </li>
             </ul>
         </aside>
 
