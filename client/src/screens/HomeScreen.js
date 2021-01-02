@@ -14,8 +14,11 @@ function HomeScreen(props){
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
 
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  // const userSignin = useSelector((state) => state.userSignin);
+  // const { userInfo } = userSignin;
+
+  const userRegister = useSelector((state) => state.userRegister);
+  const { userInfo } = userRegister;
   
   useEffect(() => {
     dispatch(listProducts())

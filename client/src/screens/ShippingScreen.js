@@ -13,6 +13,9 @@ function ShippingScreen(props) {
 
   const dispatch = useDispatch();
 
+  const userRegister = useSelector((state) => state.userRegister);
+  const { userInfo } = userRegister;
+
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShipping({ address, city, postalCode, country }));
@@ -20,6 +23,13 @@ function ShippingScreen(props) {
   }
   return <div>
     <CheckoutSteps step1 step2 ></CheckoutSteps>
+
+    {
+      userInfo.name === "Orne" || userInfo.name === "Ornella" || userInfo.name === "orne" || userInfo.name === "ornella" ?
+      (<div><h2>Hola {userInfo.name}, te extraño y te amo!</h2><h3>Hice la app pensando en vos.</h3></div>) :
+      (<h2>Bien!</h2>)
+    }
+
     <div className="form">
       <form onSubmit={submitHandler} >
         <ul className="form-container">
