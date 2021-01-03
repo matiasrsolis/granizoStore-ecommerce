@@ -4,7 +4,8 @@
   "description": "\"# mi-ninia-veneno-ecommerce\"",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node api/server.js"
+    "start": "nodemon --watch backend --exec babel-node api/server.js",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
