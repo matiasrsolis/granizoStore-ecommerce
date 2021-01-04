@@ -50,11 +50,14 @@ app.get("/api/products", (req, res) => {
 
 //app.listen(5000, () => { console.log("Server started at http://localhost:5000") })
 
-if(process.env.NODE_ENV === "production"){
-  app.use(express.static("build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve("../client/src/App.js"))
-  });
-}
+
+
+
+// if(process.env.NODE_ENV === "production"){
+//   app.use(express.static("build"));
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname,  "build", "index.html"))
+//   });
+// }
 
 app.listen((process.env.PORT || 5000), function(){ console.log('listening on *:5000'); });
