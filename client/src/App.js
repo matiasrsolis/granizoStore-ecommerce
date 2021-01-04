@@ -36,7 +36,7 @@ function App() {
           <div className="headerBox">
             <button onClick={openMenu}>Menu</button>
             <div className="brand">
-                <Link to='/'><h1>Mi Ninie Veneno</h1></Link>
+                <Link to='/'><h1>Menine Veneno</h1></Link>
                 <h3>El amor necesario</h3>
             </div>
             <nav>
