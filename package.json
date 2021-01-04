@@ -4,7 +4,6 @@
   "description": "\"# mi-ninia-veneno-ecommerce\"",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack -p",
     "start": "nodemon --watch backend --exec babel-node api/server.js",
     "postinstall": "npm run build"
   },
