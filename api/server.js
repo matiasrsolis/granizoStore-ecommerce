@@ -8,6 +8,7 @@ import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 // import uploadRoute from './routes/uploadRoute';
+const path = require('path');
 
 dotenv.config();
 
