@@ -7,8 +7,6 @@ import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
-// import uploadRoute from './routes/uploadRoute';
-const path = require('path');
 
 dotenv.config();
 
@@ -23,14 +21,19 @@ mongoose
 
 const app = express();
 app.use(bodyParser.json());
-
 app.use("/api/users", userRoute);
-
 app.use('/api/products', productRoute);
+// app.get("/api/products/:id", (req, res) => {
+//     const productId = req.params.id;
+//     const product = data.products.filter(x => x._id == productId);
+//     if (data) {
+//         res.json(product[0]);
+//     } else {
+//         res.status(404).send({msg: "Producto no encontrado."});
+//     }
+// });
 
 app.use('/api/orders', orderRoute);
-
-// app.use('/api/uploads', uploadRoute);
 
 app.get('/api/config/paypal', (req, res) => {
   res.send(config.PAYPAL_CLIENT_ID);
@@ -40,24 +43,12 @@ app.get("/api/products", (req, res) => {
     res.send(data.products);
 });
 
-// app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
+// app.listen(5000, () => { console.log("Server started at http://localhost:5000") })
 
-// app.use(express.static(path.join(__dirname, '/../frontend/build')));
+// app.listen((process.env.PORT || 5000), function(){ console.log('listening on *:5000'); });
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
-// });
+app.set('port', process.env.PORT || 5000);
 
-//app.listen(5000, () => { console.log("Server started at http://localhost:5000") })
-
-
-
-
-// if(process.env.NODE_ENV === "production"){
-//   app.use(express.static("build"));
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.resolve(__dirname,  "build", "index.html"))
-//   });
-// }
-
-app.listen((process.env.PORT || 5000), function(){ console.log('listening on *:5000'); });
+app.listen(app.get('port'), () => {
+  console.log(`server on port ${app.get('port')}`);
+});

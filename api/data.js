@@ -1,6 +1,6 @@
 export default {
     products:[{
-        _id: 1234,
+        id: 1234,
         name: '2015 Original Blue',
         price: 128.00,
         brand: 'OyM',
@@ -11,7 +11,7 @@ export default {
         countInStock: 0
     },
     {
-        _id: 2345,
+        id: 2345,
         name: 'Fuck',
         price: 150.00,
         brand: 'Frabulosa',
@@ -22,7 +22,7 @@ export default {
         countInStock: 4
     },
     {
-        _id: 3456,
+        id: 3456,
         name: 'Electric Feel',
         price: 143.00,
         brand: 'OyM',
@@ -33,7 +33,7 @@ export default {
         countInStock: 3
     },
     {
-        _id: 4567,
+        id: 4567,
         name: 'I Wanna Rock!',
         price: 137.00,
         brand: 'OyM',
@@ -44,7 +44,7 @@ export default {
         countInStock: 10
     },
     {
-        _id: 5678,
+        id: 5678,
         name: 'I feel it comin',
         price: 125.00,
         brand: 'OyM',
@@ -55,7 +55,7 @@ export default {
         countInStock: 15
     },
     {
-        _id: 6789,
+        id: 6789,
         name: 'Flowers',
         price: 145.00,
         brand: 'OyM',
@@ -65,7 +65,7 @@ export default {
         description: 'Dance.'
     },
     {
-        _id: 7890,
+        id: 7890,
         name: 'Wat?',
         price: 133.00,
         brand: 'OyM',
@@ -75,7 +75,7 @@ export default {
         description: 'Para un sábado de lluvia.'
     },
     {
-        _id: 8901,
+        id: 8901,
         name: 'Lol',
         price: 171.00,
         brand: 'OyM',
